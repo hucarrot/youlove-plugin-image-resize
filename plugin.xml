@@ -1,0 +1,55 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="youlove-plugin-image-resize"
+        version="1.0.0">
+
+    <name>ImageResize</name>
+    <description>Cordova image resize</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,image,resize</keywords>
+    <repo>https://github.com/hucarrot/youlove-plugin-image-resize.git</repo>
+    <issue>https://github.com/hucarrot/youlove-plugin-image-resize/issues</issue>
+
+    <engines>
+      <engine name="cordova" version=">=5.0.0"/>
+    </engines>
+
+    <!-- dependencies -->
+    <dependency id="cordova-plugin-file" version="^4.0.0" />
+
+    <js-module src="www/ImageResize.js" name="ImageResizePlugin">
+      <clobbers target="ImageResize"/>
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+        <feature name="ImageResizePlugin">
+          <param name="ios-package" value="ImageResize"/>
+        </feature>
+      </config-file>
+
+      <header-file src="src/ios/ImageResize.h"/>
+      <source-file src="src/ios/ImageResize.m"/>
+
+      <header-file src="src/ios/NSData+Base64.h"/>
+      <source-file src="src/ios/NSData+Base64.m" compiler-flags="-fno-objc-arc"/>
+
+      <header-file src="src/ios/UIImage+Scale.h"/>
+      <source-file src="src/ios/UIImage+Scale.m"/>
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="ImageResizePlugin">
+          <param name="android-package" value="com.raananw.ImageResizePlugin"/>
+        </feature>
+      </config-file>
+
+      <source-file src="src/Android/com/raananw/ImageResizePlugin.java" target-dir="src/com/raananw"/>
+    </platform>
+
+</plugin>
