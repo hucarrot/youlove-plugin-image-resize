@@ -1,0 +1,19 @@
+
+{
+  "name": "youlove-plugin-image-resize",
+  "version": "1.0.0",
+  "description": "Cordova Image resize",
+  "cordova": {
+    "id": "youlove-plugin-image-resize",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hucarrot/youlove-plugin-image-resize"
+  },
+  "author": "Apache Software Foundation",
+  "license": "Apache-2.0"
+}
