@@ -18,7 +18,7 @@
     </engines>
 
     <!-- dependencies -->
-    <dependency id="cordova-plugin-file" version="^4.0.0" />
+    <dependency id="cordova-plugin-file" version="^5.0.0" />
 
     <js-module src="www/ImageResize.js" name="ImageResizePlugin">
       <clobbers target="ImageResize"/>
